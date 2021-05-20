@@ -1,0 +1,37 @@
+@dongqiuyinggrace
+Actually you need to install plotly.js-dist via npm instead of plotly.js,
+See this : #150 (comment)
+and you can find more on stack overflow: https://stackoverflow.com/questions/54200157/should-i-install-plotly-js-or-plotly-js-dist-via-npm
+
+npm uninstall plotly.js
+npm install plotly.js-dist angular-plotly.js
+npm install -D @types/plotly.js
+
+then go to node_modules/@types and rename the plotly.js folder to plotly.js-dist
+
+in app-module.ts
+
+import { NgModule } from '@angular/core';
+
+import * as PlotlyJS from 'plotly.js-dist';
+import { PlotlyModule } from 'angular-plotly.js';
+
+PlotlyModule.plotlyjs = PlotlyJS;
+
+@NgModule({
+    imports: [CommonModule, PlotlyModule],
+    ...
+})
+export class AppModule { }
+
+and it should works
+@dongqiuyinggrace
+dongqiuyinggrace commented 19 days ago
+
+It indeed works, thank you very much!
+@brmc
+brmc commented 17 days ago
+
+For anyone else coming along, the solution by @CorentinMAG works, but instead of renaming the directory, you should install it as an alias. that way you will have consistent environments wherever you need them
+
+ng add @types/plotly.js-dist@npm:@types/plotly.js
