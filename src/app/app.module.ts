@@ -10,6 +10,7 @@ import { PlotlyExampleComponent } from "./plotly-example/plotly-example.componen
 import { HomeComponent } from "./home/home.component";
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { MapplotComponent } from "./mapplot/mapplot.component";
+import { Mapplot2Component } from "./mapplot2/mapplot2.component";
 
 
 PlotlyModule.plotlyjs = PlotlyJS;
@@ -20,6 +21,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     PlotlyExampleComponent,
     HomeComponent,
     MapplotComponent,
+    Mapplot2Component,
   ],
   imports: [
     BrowserModule,
