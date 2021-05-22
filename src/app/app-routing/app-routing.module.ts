@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'plot', component: PlotlyExampleComponent },
   { path: 'map', component: MapplotComponent },
+  { path: 'map2', component: Mapplot2Component },
   {
     path: '',
     redirectTo: 'home',
@@ -23,6 +24,11 @@ const routes: Routes = [
   path: 'map',
   redirectTo: 'mapplot',
   pathMatch: 'full'
+  },
+  {
+    path: 'map2',
+    redirectTo: 'mapplot2',
+    pathMatch: 'full'
   },
   {
     path: '**',
