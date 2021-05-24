@@ -10,7 +10,8 @@ import { PlotlyExampleComponent } from "./plotly-example/plotly-example.componen
 import { HomeComponent } from "./home/home.component";
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { MapplotComponent } from "./mapplot/mapplot.component";
-
+import { Mapplot2Component } from "./mapplot2/mapplot2.component";
+import { MymapComponent } from './mymap/mymap.component';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 
@@ -20,12 +21,14 @@ PlotlyModule.plotlyjs = PlotlyJS;
     PlotlyExampleComponent,
     HomeComponent,
     MapplotComponent,
+    Mapplot2Component,
+    MymapComponent,
   ],
   imports: [
     BrowserModule,
     PlotlyModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
